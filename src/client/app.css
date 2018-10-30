@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700");
+@import url("https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css");
+@import url("../../public/app-assets/css/bootstrap.css");
+
+@import "../../public/app-assets/fonts/flag-icon-css/css/flag-icon.min.css";
+@import "../../public/app-assets/vendors/css/extensions/pace.css";
+@import "../../public/app-assets/css/bootstrap-extended.css";
+@import "../../public/app-assets/css/colors.css";
+@import "../../public/app-assets/css/components.css";
+
+@import "../../public/app-assets/css/core/menu/menu-types/horizontal-menu.css";
+@import "../../public/app-assets/css/core/colors/palette-gradient.css";
+@import "../../public/app-assets/css/style.css";
+
+h1 {
+  color: green;
+}
+
+body {
+  text-align: center;
+  margin: auto;
+}
+
+.login-box {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}

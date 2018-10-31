@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { authService } from "../services/auth";
 var base64 = require("base-64");
 
 class Login extends Component {
@@ -32,23 +33,9 @@ class Login extends Component {
       password: this.state.password
     };
 
-    let formData = new FormData();
-    formData.append("email", this.state.email);
-    formData.append("password", this.state.password);
-
-    fetch("/api/authenticate", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    })
-      .then(res => res.json())
-      .then(body => {
-        console.log(body);
-        this.props.history.push("/derivative/new");
-      });
+    authService.authenticate(data, () =>
+      this.props.history.push("/derivative")
+    );
   };
 
   render() {
